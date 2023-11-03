@@ -18,7 +18,7 @@ youtube_username: "@NLBRT"
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
-remote_theme: "dark-poole"
+theme: "Hacker"
 
 rss: rss
 
