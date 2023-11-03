@@ -10,7 +10,7 @@ github_username: "NLBRT"
 linkedin_username: "nlbrt"
 #facebook_username: username
 #flickr_username: username
-instagram_username: "@nilabrata.sanyal"
+instagram_username: "nilabrata.sanyal"
 #pinterest_username: username
 youtube_username: "@NLBRT"
 #googleplus_username: +username
@@ -18,7 +18,7 @@ youtube_username: "@NLBRT"
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
-theme: "minima"
+theme: "dark-poole"
 
 rss: rss
 
