@@ -20,7 +20,7 @@ body {
 
 /* Header & Logo Styling */
 .site-header {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: none !important; /* Removed border */
   padding: 20px 0;
   background-color: var(--bg-primary) !important;
 }
@@ -37,6 +37,7 @@ body {
 .site-title {
   text-decoration: none !important;
   display: inline-block;
+  margin-left: 20px; /* Push logo to the right */
 }
 
 .site-logo {
@@ -57,7 +58,7 @@ body {
 }
 
 .site-nav a:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /* Force font on ALL elements */
