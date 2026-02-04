@@ -46,8 +46,8 @@ body {
 }
 
 .site-title:hover .site-logo {
-  opacity: 0.85;
-  transition: opacity 0.2s ease;
+  opacity: 0.9;
+  transition: opacity 0.125s ease;
 }
 
 .site-nav a {
@@ -57,7 +57,7 @@ body {
 }
 
 .site-nav a:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /* Force font on ALL elements */
