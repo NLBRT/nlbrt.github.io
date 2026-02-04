@@ -97,3 +97,182 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 .hljs-strong {
   font-weight: bold;
 }
+
+/*
+ * Dark Syntax Highlighting Theme
+ * Inspired by GitHub Dark / VS Code Dark
+ */
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+  background: #1a1a1a;
+  color: #e8e8e8;
+}
+
+/* Comments */
+.hljs-comment,
+.hljs-quote {
+  color: #6a9955;
+  font-style: italic;
+}
+
+/* Keywords */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #569cd6;
+  font-weight: normal;
+}
+
+/* Numbers */
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #b5cea8;
+}
+
+/* Strings */
+.hljs-string,
+.hljs-doctag {
+  color: #ce9178;
+}
+
+/* Functions */
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #dcdcaa;
+  font-weight: normal;
+}
+
+/* Classes, Types */
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #4ec9b0;
+}
+
+/* Built-ins */
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #4ec9b0;
+}
+
+/* Attributes */
+.hljs-attribute,
+.hljs-attr {
+  color: #9cdcfe;
+}
+
+/* Symbols, Regex */
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-regexp {
+  color: #d16969;
+}
+
+/* Meta, Preprocessor */
+.hljs-meta {
+  color: #808080;
+}
+
+.hljs-meta-keyword {
+  color: #569cd6;
+}
+
+.hljs-meta-string {
+  color: #ce9178;
+}
+
+/* Tags in markup */
+.hljs-tag {
+  color: #569cd6;
+}
+
+.hljs-name {
+  color: #569cd6;
+}
+
+/* Deletion, Addition (Git) */
+.hljs-deletion {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+}
+
+.hljs-addition {
+  color: #50fa7b;
+  background: rgba(80, 250, 123, 0.1);
+}
+
+/* Emphasis */
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/* Link */
+.hljs-link {
+  text-decoration: underline;
+}
+
+/* SQL specific */
+.sql .hljs-keyword {
+  color: #569cd6;
+  text-transform: uppercase;
+}
+
+.sql .hljs-built_in {
+  color: #4ec9b0;
+}
+
+/* JavaScript/Python specific */
+.hljs-params {
+  color: #9cdcfe;
+}
+
+/* Shell/Bash */
+.bash .hljs-built_in,
+.sh .hljs-built_in {
+  color: #dcdcaa;
+}
+
+/* Make sure line numbers (if used) are visible */
+.hljs-ln-numbers {
+  color: #858585;
+  border-right: 1px solid #2a2a2a;
+  padding-right: 10px;
+  margin-right: 10px;
+  text-align: right;
+  user-select: none;
+}
+
+/* Inline code styling */
+code:not(.hljs) {
+  background-color: #1a1a1a;
+  color: #ff79c6;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+}
+
+/* Code block container */
+pre {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 5px;
+  margin: 1em 0;
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
