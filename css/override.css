@@ -1,49 +1,301 @@
+/* Root color variables for easy customization */
+:root {
+  --bg-primary: #080808;
+  --bg-secondary: #080808;
+  --text-primary: #ffffff;
+  --text-secondary: #f8f8f8;
+  --text-muted: #b8b8b8;
+  --accent-color: #B6FA49;
+  --border-color: #888888;
+  --code-bg: #1a1a1a;
+  --link-hover: #B6FA49;
+}
+
 body {
-  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  font-family: 'HelveticaNeueCustom', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  line-height: 1.6;
 }
 
-hr {
-  margin-top: 30px;
-  margin-bottom: 20px;
+/* Force font on ALL elements */
+* {
+  font-family: 'HelveticaNeueCustom', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
 }
 
-/* Post navigation links */
-.post_navi {
-  display: flex;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  font-family: 'HelveticaNeueCustom', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
 }
 
-.post_navi-label {
-  font-size: 0.8em;
-  opacity: 0.5;
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
 }
 
-.post_navi .post_navi-item {
-  padding: 0 2.2em;
-  width: 50%;
-  position: relative;
-  color: inherit !important;
+h2 {
+  font-size: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.3em;
 }
 
-.post_navi .nav_prev {
+h3 {
+  font-size: 1.25em;
+  margin-top: 1.2em;
+}
+
+/* Links */
+a {
+  color: var(--accent-color) !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover) !important;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--accent-color) !important;
+}
+
+/* Paragraphs and text */
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1em;
+}
+
+/* Lists */
+ul, ol {
+  color: var(--text-secondary);
+  padding-left: 2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Code blocks */
+code {
+  background-color: var(--code-bg) !important;
+  color: #ff79c6 !important;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: "Courier New", Courier, monospace !important;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: var(--code-bg) !important;
+  color: var(--text-primary) !important;
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+}
+
+pre code {
+  background-color: transparent !important;
+  padding: 0;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--accent-color);
+  padding-left: 1em;
+  margin-left: 0;
+  color: var(--text-muted) !important;
+  font-style: italic;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  background-color: var(--bg-secondary);
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 0.75em;
   text-align: left;
+  color: var(--text-secondary);
 }
 
-.post_navi .nav_next {
-  text-align: right;
+th {
+  background-color: var(--code-bg);
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
-.post_navi .nav_prev .post_navi-arrow {
-  left: 0;
+tr:hover {
+  background-color: var(--bg-primary);
 }
 
-.post_navi .nav_next .post_navi-arrow {
-  right: 0;
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2em 0;
 }
 
-.post_navi .post_navi-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2.5em;
-  opacity: 0.3;
+/* Header/Navigation */
+header {
+  background-color: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1em 0;
+}
+
+nav, .site-header {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Footer */
+footer, .site-footer {
+  background-color: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted) !important;
+  padding: 2em 0;
+  margin-top: 3em;
+}
+
+/* Container/Wrapper */
+.container, .wrapper, main {
+  background-color: var(--bg-primary) !important;
+}
+
+/* Post list items */
+.post-list li {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1em 0;
+}
+
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+/* Post meta information (dates, etc) */
+.post-meta, .post-date, time {
+  color: var(--text-muted) !important;
+  font-size: 0.9em;
+}
+
+/* Post title in list */
+.post-title, .post-link {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+/* RSS feed link */
+.rss-subscribe {
+  color: var(--text-muted) !important;
+}
+
+/* Strong/Bold text */
+strong, b {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Emphasis/Italic text */
+em, i {
+  color: var(--text-secondary);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+}
+
+::-moz-selection {
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+}
+
+/* Scrollbar (webkit browsers) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Social media icons (if present) */
+.social-media-list a {
+  color: var(--text-secondary) !important;
+}
+
+.social-media-list a:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Archive page specific */
+.archive-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Syntax highlighting override (for code blocks with syntax highlighting) */
+.highlight {
+  background-color: var(--code-bg) !important;
+  border-radius: 5px;
+}
+
+.highlight pre {
+  background-color: var(--code-bg) !important;
+}
+
+/* Ensure all text inputs and forms are dark too */
+input, textarea, select {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 0.5em;
+  border-radius: 3px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 1px solid var(--accent-color);
+  border-color: var(--accent-color) !important;
+}
+
+/* Buttons */
+button, .button {
+  background-color: var(--accent-color) !important;
+  color: var(--bg-primary) !important;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover, .button:hover {
+  background-color: var(--link-hover) !important;
 }

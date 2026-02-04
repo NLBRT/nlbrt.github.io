@@ -1,8 +1,14 @@
-/* Helvetica Neue Font Family - All Variants */
+/* Helvetica Neue Font Family - Desktop Fix Version */
+/* 
+   ISSUE: Desktop browsers (especially Mac) have system "Helvetica Neue" 
+   and prioritize it over web fonts with the same name.
+   
+   SOLUTION: Use a unique custom name, then apply it everywhere.
+*/
 
 /* Light (300) */
 @font-face {
-  font-family: 'Helvetica Neue';
+  font-family: 'HelveticaNeueCustom';  /* Changed to unique name */
   src: url('../fonts/HelveticaNeue-Light.woff2') format('woff2'),
        url('../fonts/HelveticaNeue-Light.woff') format('woff');
   font-weight: 300;
@@ -12,7 +18,7 @@
 
 /* Light Italic (300) */
 @font-face {
-  font-family: 'Helvetica Neue';
+  font-family: 'HelveticaNeueCustom';
   src: url('../fonts/HelveticaNeue-LightItalic.woff2') format('woff2'),
        url('../fonts/HelveticaNeue-LightItalic.woff') format('woff');
   font-weight: 300;
@@ -22,7 +28,7 @@
 
 /* Regular (400) */
 @font-face {
-  font-family: 'Helvetica Neue';
+  font-family: 'HelveticaNeueCustom';
   src: url('../fonts/HelveticaNeue-Regular.woff2') format('woff2'),
        url('../fonts/HelveticaNeue-Regular.woff') format('woff');
   font-weight: 400;
@@ -32,7 +38,7 @@
 
 /* Regular Italic (400) */
 @font-face {
-  font-family: 'Helvetica Neue';
+  font-family: 'HelveticaNeueCustom';
   src: url('../fonts/HelveticaNeue-Italic.woff2') format('woff2'),
        url('../fonts/HelveticaNeue-Italic.woff') format('woff');
   font-weight: 400;
@@ -42,7 +48,7 @@
 
 /* Bold (700) */
 @font-face {
-  font-family: 'Helvetica Neue';
+  font-family: 'HelveticaNeueCustom';
   src: url('../fonts/HelveticaNeue-Bold.woff2') format('woff2'),
        url('../fonts/HelveticaNeue-Bold.woff') format('woff');
   font-weight: 700;
@@ -52,10 +58,22 @@
 
 /* Bold Italic (700) */
 @font-face {
-  font-family: 'Helvetica Neue';
+  font-family: 'HelveticaNeueCustom';
   src: url('../fonts/HelveticaNeue-BoldItalic.woff2') format('woff2'),
        url('../fonts/HelveticaNeue-BoldItalic.woff') format('woff');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
+}
+
+/* Apply the custom font to everything */
+* {
+  font-family: 'HelveticaNeueCustom', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+/* Make sure it overrides everything */
+body, html, h1, h2, h3, h4, h5, h6, p, a, span, div, 
+input, textarea, button, select, option, label,
+pre, code, table, th, td, li, ul, ol {
+  font-family: 'HelveticaNeueCustom', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
 }
