@@ -255,8 +255,8 @@ em, i {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
-  border: 1px solid var(--border-color);
+  border-radius: 5%;
+  border: 0px solid var(--border-color);
 }
 
 /* Selection */
